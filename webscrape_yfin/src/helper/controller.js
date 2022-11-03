@@ -1,14 +1,9 @@
-const WebScrapingLocalTest = require("./helper_func")
+const configDir = require("../config/ConfigDir")
+// const WebScrapingLocalTest = require("./helper_func")
 
 exports.scrapeWeb = async (req, res) => {
     try {
-        const data = await WebScrapingLocalTest();
-        res.status(200).json({
-            statusCode: 200,
-            statusMessage: "OK",
-            success: true,
-            data
-        });
+        res.sendFile(configDir.templateDir + "/yfin.html");
     } catch (error) {
         console.error(error)
         return res.status(500).send({

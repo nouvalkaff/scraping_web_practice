@@ -5,9 +5,7 @@ class obtainCurrency extends webDriverHelper {
     async WebScrapingLocalTest() {
         try {
             const openWeb = await super.openWeb(url);
-            const arrayWeb = await super.accessElementsYahooFin(openWeb)
-
-            return arrayWeb;
+            return await super.accessElementsYahooFin(openWeb)
         } catch (error) {
             console.error(error);
             throw error;
@@ -18,4 +16,4 @@ class obtainCurrency extends webDriverHelper {
 
 }
 
-module.exports = obtainCurrency;
+// const 
